@@ -9,7 +9,6 @@
   <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
     <!-- Single realm app.  If you have multiple realms, use the 'realms' property instead. -->
     <property name="realm" ref="myRealm"/>
-    <property name="cacheManager" ref="cacheManager"/>
     <property name="sessionManager" ref="sessionManager"/>
   </bean>
 
@@ -17,7 +16,6 @@
     <property name="resourcePath" value="classpath:shiro.ini"/>
   </bean>
 
-  <bean id="cacheManager" class="org.apache.shiro.hazelcast.cache.HazelcastCacheManager"/>
 
   <bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
     <property name="sessionDAO" ref="sessionDao"/>
